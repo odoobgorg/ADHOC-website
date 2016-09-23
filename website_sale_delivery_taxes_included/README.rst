@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================
-Website Sale Product Description
-================================
+======================================
+eCommerce Delivery with taxes included
+======================================
 
-This module add description in Website Sale Product.
+This module include the taxes in eCommerce Delivery
 
 Installation
 ============

@@ -2,11 +2,15 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================
-Website Sale Product Description
-================================
+=================================
+e-Commerce Custom Products Search
+=================================
 
-This module add description in Website Sale Product.
+This module allow Custom Products Search in e-Commerce
+Search also by:
+
+* attributes
+* public categories
 
 Installation
 ============

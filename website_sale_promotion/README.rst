@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================
-Website Sale Product Description
-================================
+======================
+Website Sale Promotion
+======================
 
-This module add description in Website Sale Product.
+This module create promotions for products and specified a public category to show them
 
 Installation
 ============

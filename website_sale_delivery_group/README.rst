@@ -2,11 +2,12 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================
-Website Sale Product Description
-================================
+==========================
+e-Commerce Delivery Groups
+==========================
 
-This module add description in Website Sale Product.
+Allow to set groups on delivery methods acquires,
+    only users of that groups will be able to use them
 
 Installation
 ============
