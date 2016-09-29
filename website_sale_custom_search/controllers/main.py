@@ -18,14 +18,18 @@ class website_sale(website_sale):
         domain = super(website_sale, self)._get_search_domain(
             search, category, attrib_values)
         if search:
+            sub_domain = []
+            connector = []
+            # todo split search for public categories
             for srch in search.split(" "):
                 public_categ_ids = pool['product.public.category'].search(
                     cr, uid, [('name', 'ilike', srch)], context=context)
-                domain = [
-                    '|', ('sale_ok', '=', True), '|',
+                sub_domain = connector + sub_domain + [
+                    '|',
                     ('attribute_line_ids.value_ids.name', 'ilike', srch),
                     ('public_categ_ids', 'child_of', public_categ_ids)
-                    ] + domain
+                ]
+                connector = ['|', ]
         return domain
 
     @http.route()
