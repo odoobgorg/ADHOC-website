@@ -19,7 +19,7 @@ class sale_order_line(models.Model):
         compute='_fnct_get_discounted_price',
         string='Discounted price',
         digits=dp.get_precision('Product Price')
-        )
+    )
 
     @api.multi
     def _fnct_get_discounted_price(self):
@@ -27,9 +27,10 @@ class sale_order_line(models.Model):
         # TODO perhups we can use l10n_ar_sale printed prices
         for line in self:
             discounted_price = (
-                line.price_unit * (1.0 - (line.discount or 0.0) / 100.0))
+                line.price_unit *
+                (1.0 - (line.discount or 0.0) / 100.0))
             # add taxes
             discounted_price = line.tax_id.compute_all(
-                discounted_price, 1.0, product=line.product_id,
+                discounted_price, product=line.product_id,
                 partner=line.order_id.partner_id)['total_included']
             line.discounted_price = discounted_price
