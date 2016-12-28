@@ -21,7 +21,6 @@ addons:
       - python-simplejson
       - python-serial
       - python-yaml
-      - wkhtmltopdf # for odoo pdf reports (tested on sale for eg.)
       # for aeroo
       - cups
       - libcups2-dev
@@ -64,6 +63,12 @@ env:
 
 virtualenv:
   system_site_packages: true
+
+# Enable this if your repository needs sass command (needed for website related repos)
+before_install:
+  - rvm install ruby --latest
+  - gem install bootstrap-sass
+  - gem install compass --pre
 
 install:
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
